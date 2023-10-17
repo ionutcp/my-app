@@ -1,0 +1,23 @@
+header {
+    display: flex;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    flex-wrap: wrap;
+}
+
+li a {
+    display: inline-block;
+    padding: 20px;
+}
