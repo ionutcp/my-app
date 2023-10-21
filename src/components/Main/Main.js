@@ -1,8 +1,16 @@
+import About from "./About/About";
+import Hero from "./Hero/Hero";
+import Specials from "./Specials/Specials";
+import Testimonials from "./Testimonials/Testimonials";
+
 function Main() {
   return (
-    <>
-      <main></main>
-      </>
+    <main>
+      <Hero />
+      <Specials />
+      <Testimonials />
+      <About />
+    </main>
   );
 }
 

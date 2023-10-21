@@ -1,0 +1,82 @@
+.testimonials {
+    background: #aaa;
+    min-height: 70vh;
+}
+
+
+.rating1, .rating2, .rating3 {
+    margin-bottom: 1em;
+    background: #fff;
+}
+
+.rating-body {
+    padding: 1em;
+}
+.title-testimonials-container h2 {
+    margin: 2em 0 2em 0;
+}
+.rating-image {
+    max-width: 100%;
+}
+
+.user-image {
+    max-width: 100%;
+    justify-self: start;
+}
+
+.rating-stars {
+    padding: 1em 0 0.5em 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 720px) {
+    .title-testimonials-container {
+        grid-template-areas:
+          ". . h2 h2 h2 h2 h2 h2 h2 h2 . ."
+          ;
+          display: grid;
+    }
+    .title-testimonials-container h2 {
+        grid-area: h2;
+        text-align: center;
+        text-wrap: wrap;
+        padding: 2em 0;
+    }
+
+    .ratings-container {
+        grid-template-areas:
+          ". . rating1 rating1 . rating2 rating2 . rating3 rating3 . ."
+          ;
+          display: grid;
+          padding: 0 0 5em 0;
+    }
+
+    .ratings-user {
+        grid-template-areas:
+          "img img img img h6 h6 h6 h6 h6 h6 h6 he"
+          ;
+          display: grid;
+    }
+    .user-image {
+        grid-area: img;
+    }
+    .user-name {
+        grid-area: h6;
+    }
+
+    .rating1 {
+        grid-area: rating1;
+    }
+    .rating2 {
+        grid-area: rating2;
+    }
+    .rating3 {
+        grid-area: rating3;
+    }
+    .rating1, .rating2, .rating3 {
+        text-align: start;
+        text-wrap: wrap;
+        padding: 0;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,39 @@
+.about {
+    min-height: 70vh;
+}
+
+.about-container {
+    text-align: center;
+    min-height: 50vh;
+}
+
+.about-text-container {
+    padding: 2em;
+}
+
+.about-image {
+    margin: 4em 0 4em 0;
+    height: auto;
+    width: 200px;
+}
+
+@media only screen and (min-width: 720px) {
+    .about-container {
+        grid-template-areas:
+          ". . div div div img img img img img . ."
+          ;
+          display: grid;
+    }
+    .about-text-container {
+        grid-area: div;
+        text-align: start;
+        text-wrap: wrap;
+        padding: 0;
+    }
+    .about-image {
+        grid-area: img;
+        display: inline-block;
+        justify-self: end;
+        width: 400px;
+    }
+}

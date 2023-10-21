@@ -1,0 +1,70 @@
+footer {
+    background: #aaa;
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-text-container {
+    padding: 2em;
+}
+
+.footer-image {
+    margin: 2em 0 2em 0;
+    height: auto;
+    width: 50%;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+.footer a {
+    color: #111;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #4b6059;
+}
+
+@media only screen and (min-width: 720px) {
+    .footer-container {
+        grid-template-areas:
+          ". . img img menu menu contact contact social social . ."
+          ;
+          display: grid;
+          align-content: start;
+          align-items: start;
+          padding-top: 5em;
+          padding-bottom: 5em;
+    }
+    .footer-image {
+        grid-area: img;
+        display: inline-block;
+        justify-self: start;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .footer-menu-container {
+        grid-area: menu;
+        text-align: start;
+        text-wrap: wrap;
+        padding: 0;
+    }
+    .footer-contact-container {
+        grid-area: contact;
+        text-align: start;
+        text-wrap: wrap;
+        padding: 0;
+    }
+    .footer-social-container {
+        grid-area: social;
+        text-align: start;
+        text-wrap: wrap;
+        padding: 0;
+    }
+}

@@ -1,10 +1,10 @@
 import './Header.css';
-import logo from "./logo.jpg"
+import logo from "../../assets/images/logo.png"
 function Header() {
   return (
     <>
-      <header>
-        <img src={logo} />
+      <header className='mobile-flex grid-container header'>
+        <img src={logo} alt="little lemon logo" className='logo' />
         <nav>
           <ul>
             <li>
