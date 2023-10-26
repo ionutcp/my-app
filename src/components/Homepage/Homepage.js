@@ -3,7 +3,7 @@ import Hero from "./Hero/Hero";
 import Specials from "./Specials/Specials";
 import Testimonials from "./Testimonials/Testimonials";
 
-function Main() {
+function Homepage() {
   return (
     <main>
       <Hero />
@@ -14,4 +14,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Homepage;

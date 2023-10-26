@@ -57,6 +57,32 @@ div, article, aside, img {
     background-position: left;
 }
 
+.b-danger {
+	display: inline-block;
+	color: #fff;
+	padding: 10px;
+	font-weight: 700;
+	background: linear-gradient(to left, #ff0000 50%, #111 50%);
+	background-size: 200%;
+	background-position: right;
+	transition: background-position 0.5s ease-in-out;
+  }
+
+  .b-success {
+	  display: inline-block;
+	  color: #fff;
+	  padding: 10px;
+	  font-weight: 700;
+	  background: linear-gradient(to left, #006f00 50%, #111 50%);
+	  background-size: 200%;
+	  background-position: right;
+	  transition: background-position 0.5s ease-in-out;
+	}
+	.b-danger:hover, .b-success:hover {
+		color: #fff;
+		cursor: pointer;
+		background-position: left;
+	}
 
 .b-text {
 	display: inline-block;
@@ -71,6 +97,9 @@ div, article, aside, img {
     color: #111;
     cursor: pointer;
 }
+.b-primary:disabled {
+	background: #aaa;
+}
 
 .mobile-flex {
   display: flex;
@@ -78,6 +107,90 @@ div, article, aside, img {
   justify-content: space-between;
   flex-direction: column;
 }
+
+.unstyled-button {
+	border: 0;
+	background: none;
+}
+.unstyled-button:hover {
+	cursor: pointer;
+}
+
+input, textarea, select {
+	border: 1px solid #111;
+	background: #D9D9D9;
+	color: #111;
+	padding: 1em;
+	width: 100%;
+	display: inline-block;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-group label, .input-group input,
+.input-group textarea, .input-group select, .error {
+    max-width: 500px;
+    width: 100%;
+    align-self: center;
+}
+
+.error {
+	color: #ff0000;
+	font-size: 0.8em;
+}
+
+.input-group label {
+    margin-top: 2em;
+	font-weight: 700;
+}
+
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 5em;
+  }
+
+  .left-button {
+	display: inline-block;
+	color: #F4CE14;
+	padding: 10px;
+	font-weight: 700;
+	background: linear-gradient(to left, #111 50%, #fff 50%);
+	background-size: 200%;
+	background-position: right;
+	transition: background-position 0.5s ease-in-out;
+  }
+
+  .right-button {
+	display: inline-block;
+	color: #111;
+	padding: 10px;
+	font-weight: 700;
+	background: linear-gradient(to left, #F4CE14 50%, #fff 50%);
+	background-size: 200%;
+	background-position: right;
+	transition: background-position 0.5s ease-in-out;
+  }
+
+
+  .right-button:hover {
+	  color: #111;
+	  cursor: pointer;
+	  background-position: left;
+  }
+  .left-button:hover {
+	  color: #111;
+	  cursor: pointer;
+	  background-position: left;
+  }
 
 @media only screen and (min-width: 720px) {
   .grid-container {

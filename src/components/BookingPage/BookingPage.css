@@ -1,0 +1,86 @@
+.reserve-table {
+    padding: 2em 0;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2em;
+  }
+
+  .radio-item {
+    margin: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: start;
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .radio-item label {
+	font-weight: 700;
+  }
+
+  .radio-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+  }
+  input[type="radio"] {
+    display: none; /* or opacity: 0 */
+  }
+
+  input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px; /* leave some space for the custom radio button */
+    margin-bottom: 1em;
+  }
+
+  input[type="radio"] + label:before {
+    content: ""; /* create an empty pseudo-element */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* center vertically */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* make it a circle */
+    border: 2px solid #111; /* add a border */
+  }
+
+  input[type="radio"]:checked + label:before {
+    border-color: #111; /* change the border color when checked */
+  }
+
+  input[type="radio"]:checked + label:after {
+    content: ""; /* create another empty pseudo-element */
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%); /* center vertically */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* make it a circle */
+    background-color: #111; /* add a background color */
+  }
+
+  input[type="radio"]:hover + label:before,
+  input[type="radio"]:focus + label:before {
+    border-color: #111; /* change the border color on hover or focus */
+  }
+  .submit-button-row {
+    text-align: center;
+    padding-bottom: 3em;
+  }
+
+.time-slots-table {
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.time-slots-title {
+    text-align: center;
+    width: 100%;
+}

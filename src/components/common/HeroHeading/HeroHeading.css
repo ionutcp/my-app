@@ -1,0 +1,10 @@
+.hero-title-container {
+    background: #495E57;
+    color: #F4CE14;
+}
+
+.hero-title-container h2 {
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+}

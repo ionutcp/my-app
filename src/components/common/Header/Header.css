@@ -1,0 +1,155 @@
+.header {
+    background-color: #fff;
+    padding: 20px 10px;display: flex; /* Make the container a flexbox */
+    justify-content: space-between; /* Distribute the items evenly along the main axis (horizontal) */
+    align-items: center; /* Align the items vertically in the center */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+.burger-icon {
+    margin-bottom: 1em;
+    flex: 1;
+    max-width: 2em;
+    align-self: flex-start;
+    z-index: 3;
+}
+.shop-icon {
+    margin-bottom: 1em;
+    flex: 1;
+    max-width: 2em;
+    align-self: flex-end;
+    z-index: 3;
+}
+
+.hide-menu-mobile {
+    animation-duration: 500ms;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
+}
+.show-menu-mobile {
+    animation-duration: 500ms;
+    animation-name: slideDown;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slideDown {
+    0% {
+        display: none;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        display: initial;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        display: initial;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.logo {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1em;
+    flex: 1;
+    align-self: center;
+    z-index: 3;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+nav li {
+    display: inline-block;
+    width: 100%;
+}
+
+nav li a {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-top: 2px solid #222;
+    background-size: 100% 100%;
+    color: #111;
+    transition-duration: 0.5s;
+    background-image: linear-gradient(to top, #fff 50%, #fff 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: background-position 0.5s ease-in-out;
+    -webkit-transition: background-position 0.5s ease-in-out;
+    -moz-transition: background-position 0.5s ease-in-out;
+}
+
+nav li a:hover {
+    background-position: top;
+}
+
+
+@media only screen and (min-width: 720px) {
+    .burger-icon, .shop-icon {
+        display: none;
+    }
+    .header {
+        grid-template-areas:
+          ". . img img nav nav nav nav nav nav . ."
+          ;
+          display: grid;
+    }
+    nav {
+        grid-area: nav;
+        text-align: end;
+    }
+    .logo {
+        grid-area: img;
+        width: 200px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    nav li {
+        width: auto;
+    }
+    nav li a {
+        width: 100%;
+        border-top: 0;
+        background-image: linear-gradient(to top, #fff 50%, #111 50%);
+    }
+    nav li a:hover {
+        color: #fff;
+    }
+
+    .hide-menu-mobile, .show-menu-mobile {
+        animation: none;
+        display: initial;
+        transform: none;
+        opacity: 1;
+    }
+
+}
